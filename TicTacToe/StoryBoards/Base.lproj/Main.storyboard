@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wQo-Uz-GcA">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -13,7 +13,7 @@
         <!--WalkthroughVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WalkthroughVC" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkthroughVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="WalkthroughVC" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,6 +128,7 @@
                             <constraint firstItem="BCg-5f-wTX" firstAttribute="centerY" secondItem="UsH-lG-EN5" secondAttribute="centerY" id="tNq-CJ-FwY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Cp8-iI-FZ2"/>
                     <connections>
                         <outlet property="backBtn" destination="Oqt-eW-F0W" id="Ddi-ps-h7S"/>
                         <outlet property="myCollectionView" destination="B2E-tC-xPe" id="EUU-WL-UVX"/>
@@ -137,10 +138,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1834" y="4"/>
+        </scene>
+        <!--Custom SplashVC-->
+        <scene sceneID="Mmm-Xe-MOr">
+            <objects>
+                <viewController storyboardIdentifier="CustomSplashVC" id="pWG-dX-Fhw" customClass="CustomSplashVC" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uh9-sw-n1J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="pzb-uE-n8l">
+                                <rect key="frame" x="113.66666666666669" y="343" width="148" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="0TR-8m-oAf"/>
+                                    <constraint firstAttribute="height" constant="126" id="NwT-co-erf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D0f-Gd-PPO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pzb-uE-n8l" firstAttribute="centerY" secondItem="Uh9-sw-n1J" secondAttribute="centerY" id="5PM-Kq-AH0"/>
+                            <constraint firstItem="pzb-uE-n8l" firstAttribute="centerX" secondItem="Uh9-sw-n1J" secondAttribute="centerX" id="5yj-gE-YGj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vWp-xP-qTf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKZ-z2-qYw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="4"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="hfy-nx-QTa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wQo-Uz-GcA" customClass="KPNavigationViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XH1-S2-9WK">
+                        <rect key="frame" x="0.0" y="50" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pWG-dX-Fhw" kind="relationship" relationship="rootViewController" id="e50-uv-pLP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9f-3l-KbP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="36" y="3.6945812807881775"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ic_logo" width="158" height="136"/>
         <image name="ic_onboarding1" width="200" height="200"/>
         <namedColor name="BlueV1">
             <color red="0.27450980392156865" green="0.63921568627450975" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

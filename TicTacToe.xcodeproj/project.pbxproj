@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		693A48012B3B29500024F0F0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693A48002B3B29500024F0F0 /* Home.storyboard */; };
+		693A48042B3B29A70024F0F0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A48032B3B29A70024F0F0 /* HomeVC.swift */; };
+		693A48072B3B2AA60024F0F0 /* HomeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A48052B3B2AA60024F0F0 /* HomeCVC.swift */; };
+		693A48082B3B2AA60024F0F0 /* HomeCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693A48062B3B2AA60024F0F0 /* HomeCVC.xib */; };
+		693A480A2B3B4E670024F0F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A48092B3B4E670024F0F0 /* Constants.swift */; };
+		693A480C2B3B4FB90024F0F0 /* KPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A480B2B3B4FB90024F0F0 /* KPNavigationController.swift */; };
+		693A480E2B3B567D0024F0F0 /* CustomSplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A480D2B3B567D0024F0F0 /* CustomSplashVC.swift */; };
 		694170B52B39DFF0006B93D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694170B42B39DFF0006B93D1 /* AppDelegate.swift */; };
 		694170B72B39DFF0006B93D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694170B62B39DFF0006B93D1 /* SceneDelegate.swift */; };
 		694170BC2B39DFF0006B93D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694170BA2B39DFF0006B93D1 /* Main.storyboard */; };
@@ -19,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		693A48002B3B29500024F0F0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		693A48032B3B29A70024F0F0 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		693A48052B3B2AA60024F0F0 /* HomeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCVC.swift; sourceTree = "<group>"; };
+		693A48062B3B2AA60024F0F0 /* HomeCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCVC.xib; sourceTree = "<group>"; };
+		693A48092B3B4E670024F0F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		693A480B2B3B4FB90024F0F0 /* KPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPNavigationController.swift; sourceTree = "<group>"; };
+		693A480D2B3B567D0024F0F0 /* CustomSplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplashVC.swift; sourceTree = "<group>"; };
 		694170B12B39DFF0006B93D1 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		694170B42B39DFF0006B93D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		694170B62B39DFF0006B93D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		693A48022B3B29890024F0F0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				693A48032B3B29A70024F0F0 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		694170A82B39DFF0006B93D1 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +101,8 @@
 				694170B62B39DFF0006B93D1 /* SceneDelegate.swift */,
 				694170B42B39DFF0006B93D1 /* AppDelegate.swift */,
 				694170CB2B39ECD1006B93D1 /* ParentVC.swift */,
+				693A48092B3B4E670024F0F0 /* Constants.swift */,
+				693A480B2B3B4FB90024F0F0 /* KPNavigationController.swift */,
 			);
 			path = ParentClasses;
 			sourceTree = "<group>";
@@ -86,6 +110,8 @@
 		694170CE2B39EDE0006B93D1 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				693A48052B3B2AA60024F0F0 /* HomeCVC.swift */,
+				693A48062B3B2AA60024F0F0 /* HomeCVC.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -94,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				694170BA2B39DFF0006B93D1 /* Main.storyboard */,
+				693A48002B3B29500024F0F0 /* Home.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -118,6 +145,7 @@
 		694170D22B39EE3E006B93D1 /* ViewControlles */ = {
 			isa = PBXGroup;
 			children = (
+				693A48022B3B29890024F0F0 /* Home */,
 				694170D52B39FBB7006B93D1 /* Walkthrough */,
 			);
 			path = ViewControlles;
@@ -128,6 +156,7 @@
 			children = (
 				694170D32B39EEA8006B93D1 /* WalkthroughVC.swift */,
 				694170D62B39FBEA006B93D1 /* WalkthroughCVC.swift */,
+				693A480D2B3B567D0024F0F0 /* CustomSplashVC.swift */,
 			);
 			path = Walkthrough;
 			sourceTree = "<group>";
@@ -193,6 +222,8 @@
 				694170C42B39DFF1006B93D1 /* LaunchScreen.storyboard in Resources */,
 				694170C12B39DFF1006B93D1 /* Assets.xcassets in Resources */,
 				694170BC2B39DFF0006B93D1 /* Main.storyboard in Resources */,
+				693A48082B3B2AA60024F0F0 /* HomeCVC.xib in Resources */,
+				693A48012B3B29500024F0F0 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,11 +235,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				694170B52B39DFF0006B93D1 /* AppDelegate.swift in Sources */,
+				693A48042B3B29A70024F0F0 /* HomeVC.swift in Sources */,
 				694170CC2B39ECD1006B93D1 /* ParentVC.swift in Sources */,
 				694170BF2B39DFF0006B93D1 /* TicTacToe.xcdatamodeld in Sources */,
+				693A480E2B3B567D0024F0F0 /* CustomSplashVC.swift in Sources */,
 				694170D72B39FBEA006B93D1 /* WalkthroughCVC.swift in Sources */,
+				693A48072B3B2AA60024F0F0 /* HomeCVC.swift in Sources */,
 				694170B72B39DFF0006B93D1 /* SceneDelegate.swift in Sources */,
 				694170D42B39EEA8006B93D1 /* WalkthroughVC.swift in Sources */,
+				693A480C2B3B4FB90024F0F0 /* KPNavigationController.swift in Sources */,
+				693A480A2B3B4E670024F0F0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

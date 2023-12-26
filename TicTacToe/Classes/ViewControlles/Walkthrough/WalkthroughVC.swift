@@ -32,6 +32,10 @@ class WalkthroughVC: ParentVC {
     @IBAction func nextBtnClick(_ sender: UIButton) {
         if currentIndex.row == arrWalkThrough.count - 1 {
             //Navigate to the game Screen
+//            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+//            let vc = storyBoard.instantiateViewController(withIdentifier: "HomeVC")
+           let vc =  UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!
+            navigationController?.pushViewController(vc, animated: true)
         } else {
             myCollectionView.scrollToItem(at: currentIndex.nextIndex, at: .centeredVertically, animated: true)
         }

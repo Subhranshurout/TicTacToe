@@ -11,6 +11,7 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -77,5 +78,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func redirectToHomeScreen() {
+        let entryStory = UIStoryboard(name: "Home", bundle: nil)
+        
+        let HomeVC = entryStory.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        
+        if let nav = _appDelegator.window?.rootViewController as? KPNavigationViewController {
+            nav.viewControllers = [HomeVC]
+        }
+    }
+    
+    func isAppOpenForFirstTime() {
+        if let nav = _appDelegator.window?.rootViewController as? KPNavigationViewController {
+            if _userDefault.object(forKey: "kFirstTimeUser") as? Bool ?? false {
+                let HomeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                nav.viewControllers = [HomeVC]
+            } else {
+                _userDefault.set(true, forKey: "kFirstTimeUser")
+                let walkThroughVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WalkthroughVC") as! WalkthroughVC
+                nav.viewControllers = [walkThroughVC]
+            }
+        }
+    }
+    
 }
 
