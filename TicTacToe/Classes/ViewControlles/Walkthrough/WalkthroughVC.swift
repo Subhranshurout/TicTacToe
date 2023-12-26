@@ -18,8 +18,6 @@ class WalkthroughVC: ParentVC {
         super.viewDidLoad()
         prepareData()
     }
-    
-    
     func prepareData() {
         let obj1 = WalkThrough(imageName: "ic_onboarding1", title: "Welcome", subTitle: "One of the oldest world games now\navailable on your smartphone device!")
         let obj2 = WalkThrough(imageName: "ic_onboarding2", title: "Compete", subTitle: "Play the game with your friends, and prove\nthat you’re a worthy opponent!")
@@ -39,6 +37,12 @@ class WalkthroughVC: ParentVC {
         }
     }
     
+    @IBAction func pageConreollerClick(_ sender: UIPageControl) {
+        var indexPath : IndexPath = [0,0]
+        indexPath.row = sender.currentPage
+        
+        myCollectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+    }
     
 }
 

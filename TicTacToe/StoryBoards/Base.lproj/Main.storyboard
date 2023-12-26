@@ -84,6 +84,9 @@
                                 <rect key="frame" x="129.66666666666666" y="728" width="116" height="26"/>
                                 <color key="pageIndicatorTintColor" name="NaturalLightGrey"/>
                                 <color key="currentPageIndicatorTintColor" name="BlueV1"/>
+                                <connections>
+                                    <action selector="pageConreollerClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="8NX-t2-O97"/>
+                                </connections>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqt-eW-F0W">
                                 <rect key="frame" x="24" y="726.66666666666663" width="52" height="29"/>
