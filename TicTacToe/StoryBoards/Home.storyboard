@@ -34,12 +34,22 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="ICR-q0-oqM"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQx-yU-o7I">
+                                <rect key="frame" x="148" y="713" width="79" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Restart"/>
+                                <connections>
+                                    <action selector="bnt:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XXW-Y0-xW3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="NQx-yU-o7I" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LtL-3w-bHV"/>
                             <constraint firstItem="dyv-Wd-qLk" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Pc9-EI-O1k"/>
                             <constraint firstItem="dyv-Wd-qLk" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="WvD-EN-eLh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NQx-yU-o7I" secondAttribute="bottom" constant="30" id="ZyW-Jd-3Ax"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dyv-Wd-qLk" secondAttribute="trailing" constant="14" id="cPR-dY-OXZ"/>
                             <constraint firstItem="dyv-Wd-qLk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="14" id="ttu-vl-g3G"/>
                         </constraints>

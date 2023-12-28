@@ -9,16 +9,34 @@ import UIKit
 
 class HomeCVC: UICollectionViewCell {
 
+    @IBOutlet weak var textLbl: UILabel!
+    @IBOutlet weak var bgView: RoundView!
     override func awakeFromNib() {
         super.awakeFromNib()
         
+    }
+    func prepareUI (playerType : Player) {
+        switch playerType {
+        case .X:
+            bgView.backgroundColor = UIColor.blueV2
+            bgView.borderColor = UIColor.blueV1
+            bgView.borderWidth = 1
+            textLbl.text = "X"
+            textLbl.textColor = UIColor.blueV1
+        case .O:
+            bgView.backgroundColor = UIColor.redV2
+            bgView.borderColor = UIColor.redV1
+            bgView.borderWidth = 1
+            textLbl.text = "O"
+            textLbl.textColor = UIColor.redV1
+        }
     }
 
 }
 extension HomeCVC {
     static func prepareToRegister(sender : UICollectionView) {
         sender.register(UINib(nibName: "HomeCVC", bundle: nil), forCellWithReuseIdentifier: "HomeCVC")
-        }
+    }
 }
 
 

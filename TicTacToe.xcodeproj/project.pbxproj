@@ -23,6 +23,7 @@
 		694170CC2B39ECD1006B93D1 /* ParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694170CB2B39ECD1006B93D1 /* ParentVC.swift */; };
 		694170D42B39EEA8006B93D1 /* WalkthroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694170D32B39EEA8006B93D1 /* WalkthroughVC.swift */; };
 		694170D72B39FBEA006B93D1 /* WalkthroughCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694170D62B39FBEA006B93D1 /* WalkthroughCVC.swift */; };
+		69B347B52B3C6F560042BF38 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B347B42B3C6F560042BF38 /* GameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		694170CB2B39ECD1006B93D1 /* ParentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentVC.swift; sourceTree = "<group>"; };
 		694170D32B39EEA8006B93D1 /* WalkthroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WalkthroughVC.swift; path = TicTacToe/Classes/ViewControlles/Walkthrough/WalkthroughVC.swift; sourceTree = SOURCE_ROOT; };
 		694170D62B39FBEA006B93D1 /* WalkthroughCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughCVC.swift; sourceTree = "<group>"; };
+		69B347B42B3C6F560042BF38 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		694170D12B39EE2F006B93D1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				69B347B42B3C6F560042BF38 /* GameModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				694170CC2B39ECD1006B93D1 /* ParentVC.swift in Sources */,
 				694170BF2B39DFF0006B93D1 /* TicTacToe.xcdatamodeld in Sources */,
 				693A480E2B3B567D0024F0F0 /* CustomSplashVC.swift in Sources */,
+				69B347B52B3C6F560042BF38 /* GameModel.swift in Sources */,
 				694170D72B39FBEA006B93D1 /* WalkthroughCVC.swift in Sources */,
 				693A48072B3B2AA60024F0F0 /* HomeCVC.swift in Sources */,
 				694170B72B39DFF0006B93D1 /* SceneDelegate.swift in Sources */,

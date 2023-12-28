@@ -54,6 +54,10 @@
                 <constraint firstAttribute="trailing" secondItem="SBJ-aL-9EG" secondAttribute="trailing" id="bBE-Nx-yWX"/>
             </constraints>
             <size key="customSize" width="127" height="105"/>
+            <connections>
+                <outlet property="bgView" destination="SBJ-aL-9EG" id="RCA-Ja-CoB"/>
+                <outlet property="textLbl" destination="l8m-aG-ejA" id="Cer-UW-VtO"/>
+            </connections>
             <point key="canvasLocation" x="185.49618320610685" y="39.08450704225352"/>
         </collectionViewCell>
     </objects>
