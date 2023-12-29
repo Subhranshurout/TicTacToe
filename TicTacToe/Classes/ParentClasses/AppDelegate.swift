@@ -78,15 +78,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-    func redirectToHomeScreen() {
-        let entryStory = UIStoryboard(name: "Home", bundle: nil)
-        
-        let HomeVC = entryStory.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-        
-        if let nav = _appDelegator.window?.rootViewController as? KPNavigationViewController {
-            nav.viewControllers = [HomeVC]
-        }
-    }
+//    func redirectToHomeScreen() {
+//        let entryStory = UIStoryboard(name: "Home", bundle: nil)
+//        
+//        let HomeVC = entryStory.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+//
+//        if let nav = _appDelegator.window?.rootViewController as? KPNavigationViewController {
+//            nav.viewControllers = [HomeVC]
+//        }
+//    }
     
     func isAppOpenForFirstTime() {
         if let nav = _appDelegator.window?.rootViewController as? KPNavigationViewController {

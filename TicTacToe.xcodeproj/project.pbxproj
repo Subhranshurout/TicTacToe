@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		693A48012B3B29500024F0F0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693A48002B3B29500024F0F0 /* Home.storyboard */; };
-		693A48042B3B29A70024F0F0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A48032B3B29A70024F0F0 /* HomeVC.swift */; };
+		693A48042B3B29A70024F0F0 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A48032B3B29A70024F0F0 /* GameVC.swift */; };
 		693A48072B3B2AA60024F0F0 /* HomeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A48052B3B2AA60024F0F0 /* HomeCVC.swift */; };
 		693A48082B3B2AA60024F0F0 /* HomeCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693A48062B3B2AA60024F0F0 /* HomeCVC.xib */; };
 		693A480A2B3B4E670024F0F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A48092B3B4E670024F0F0 /* Constants.swift */; };
@@ -24,11 +24,14 @@
 		694170D42B39EEA8006B93D1 /* WalkthroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694170D32B39EEA8006B93D1 /* WalkthroughVC.swift */; };
 		694170D72B39FBEA006B93D1 /* WalkthroughCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694170D62B39FBEA006B93D1 /* WalkthroughCVC.swift */; };
 		69B347B52B3C6F560042BF38 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B347B42B3C6F560042BF38 /* GameModel.swift */; };
+		69C93AC62B3F4FCF00427412 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69C93AC42B3F4FCF00427412 /* Roboto-Medium.ttf */; };
+		69C93AC72B3F4FCF00427412 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69C93AC52B3F4FCF00427412 /* Roboto-Regular.ttf */; };
+		69C93AC92B3F59ED00427412 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C93AC82B3F59ED00427412 /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		693A48002B3B29500024F0F0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		693A48032B3B29A70024F0F0 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		693A48032B3B29A70024F0F0 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		693A48052B3B2AA60024F0F0 /* HomeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCVC.swift; sourceTree = "<group>"; };
 		693A48062B3B2AA60024F0F0 /* HomeCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCVC.xib; sourceTree = "<group>"; };
 		693A48092B3B4E670024F0F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -46,6 +49,9 @@
 		694170D32B39EEA8006B93D1 /* WalkthroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WalkthroughVC.swift; path = TicTacToe/Classes/ViewControlles/Walkthrough/WalkthroughVC.swift; sourceTree = SOURCE_ROOT; };
 		694170D62B39FBEA006B93D1 /* WalkthroughCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughCVC.swift; sourceTree = "<group>"; };
 		69B347B42B3C6F560042BF38 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		69C93AC42B3F4FCF00427412 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		69C93AC52B3F4FCF00427412 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		69C93AC82B3F59ED00427412 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +68,8 @@
 		693A48022B3B29890024F0F0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				693A48032B3B29A70024F0F0 /* HomeVC.swift */,
+				693A48032B3B29A70024F0F0 /* GameVC.swift */,
+				69C93AC82B3F59ED00427412 /* HomeVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -86,11 +93,12 @@
 		694170B32B39DFF0006B93D1 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				69C93AC42B3F4FCF00427412 /* Roboto-Medium.ttf */,
+				69C93AC52B3F4FCF00427412 /* Roboto-Regular.ttf */,
 				694170CE2B39EDE0006B93D1 /* Nibs */,
 				694170CF2B39EDE8006B93D1 /* StoryBoards */,
 				694170D02B39EE0E006B93D1 /* Classes */,
 				694170C02B39DFF1006B93D1 /* Assets.xcassets */,
-				694170C22B39DFF1006B93D1 /* LaunchScreen.storyboard */,
 				694170C52B39DFF1006B93D1 /* Info.plist */,
 				694170BD2B39DFF0006B93D1 /* TicTacToe.xcdatamodeld */,
 			);
@@ -123,6 +131,7 @@
 			children = (
 				694170BA2B39DFF0006B93D1 /* Main.storyboard */,
 				693A48002B3B29500024F0F0 /* Home.storyboard */,
+				694170C22B39DFF1006B93D1 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -223,7 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				694170C42B39DFF1006B93D1 /* LaunchScreen.storyboard in Resources */,
+				69C93AC72B3F4FCF00427412 /* Roboto-Regular.ttf in Resources */,
 				694170C12B39DFF1006B93D1 /* Assets.xcassets in Resources */,
+				69C93AC62B3F4FCF00427412 /* Roboto-Medium.ttf in Resources */,
 				694170BC2B39DFF0006B93D1 /* Main.storyboard in Resources */,
 				693A48082B3B2AA60024F0F0 /* HomeCVC.xib in Resources */,
 				693A48012B3B29500024F0F0 /* Home.storyboard in Resources */,
@@ -238,9 +249,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				694170B52B39DFF0006B93D1 /* AppDelegate.swift in Sources */,
-				693A48042B3B29A70024F0F0 /* HomeVC.swift in Sources */,
+				693A48042B3B29A70024F0F0 /* GameVC.swift in Sources */,
 				694170CC2B39ECD1006B93D1 /* ParentVC.swift in Sources */,
 				694170BF2B39DFF0006B93D1 /* TicTacToe.xcdatamodeld in Sources */,
+				69C93AC92B3F59ED00427412 /* HomeVC.swift in Sources */,
 				693A480E2B3B567D0024F0F0 /* CustomSplashVC.swift in Sources */,
 				69B347B52B3C6F560042BF38 /* GameModel.swift in Sources */,
 				694170D72B39FBEA006B93D1 /* WalkthroughCVC.swift in Sources */,
