@@ -72,3 +72,25 @@ class RoundView: UIView {
 
 
 
+
+import UIKit
+
+class CustomRoundedButton: UIButton {
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupButton()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupButton()
+    }
+
+    private func setupButton() {
+        layer.cornerRadius = 4.0
+        layer.borderWidth = 1.5
+        layer.borderColor = UIColor.labelV1.cgColor
+        clipsToBounds = true
+    }
+}

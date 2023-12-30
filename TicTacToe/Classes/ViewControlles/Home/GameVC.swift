@@ -7,16 +7,46 @@
 
 import UIKit
 
-class GameVC: ParentVC {
+class GameVC: ParentVC, ComputerModeDelegate {
+    func computerMadeMove(at index: Int) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.handleCellTap(at: IndexPath(row: index, section: 0))
+            self.myCollectionView.isUserInteractionEnabled = true
+        }
+    }
     
     var gameObj : TicTacToe!
+    var playingMode : PlayingMode = .computer
     @IBOutlet weak var winnerLbl: UILabel!
     @IBOutlet weak var greetingsLbl: UILabel!
+    @IBOutlet weak var titleLbl: UILabel! {
+        didSet {
+            switch playingMode {
+            case .player:
+                titleLbl.text = "Multiplayer"
+            case .computer:
+                titleLbl.text = "Single Player"
+            }
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gameObj = TicTacToe()
         prepareUI()
+        
+        if playingMode == .computer {
+            gameObj.computerDelegate = self
+        }
+        
     }
+    
+    @IBAction func backBtn(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     @IBAction func playAgainBtnClick(_ sender: UIButton) {
         winnerLbl.isHidden = true
@@ -47,7 +77,11 @@ extension GameVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             if gameObj.makeMove(at: indexPath.item) {
                 cell.prepareUI(playerType: gameObj.currentPlayer)
                 gameObj.switchPlayer()
-                winnerCheck()
+                if playingMode == .computer  && gameObj.currentPlayer == .O {
+                    gameObj.switchPlayer(playerMode: .computer)
+                    myCollectionView.isUserInteractionEnabled = false
+                }
+                gameObj.gamemode = winnerCheck()
                 
             }
         } else {
@@ -72,7 +106,10 @@ extension GameVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             gameObj.gamemode = .playing
         }
         if gameObj.board[indexPath.item] == nil {
-            updateUI(indexPath: indexPath)
+            if gameObj.gamemode == .playing {
+                updateUI(indexPath: indexPath)
+            }
+            
         } else  {
             print("Alredy occupied")
         }
@@ -83,6 +120,7 @@ extension GameVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             winnerLbl.textColor = UIColor.black
             winnerLbl.text = "DRAW!"
             greetingsLbl.text = "It’s a draw"
+            gameObj.gamemode = .finished
         }
     }
     
@@ -90,24 +128,37 @@ extension GameVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         myCollectionView.reloadItems(at: [indexPath])
     }
     
-    func winnerCheck() {
+    func winnerCheck() -> GameMode {
         switch gameObj.checkForWinner() {
         case .O :
             print ("Player O wins")
-            
+            if playingMode == .computer {
+                winnerLbl.text = "You Lost!"
+                greetingsLbl.text = "Better luck next time.."
+            }
             winnerLbl.textColor = UIColor.redV1
+            
+            winnerLbl.isHidden = false
+            greetingsLbl.isHidden = false
+            gameObj.resetGame()
+            myCollectionView.isUserInteractionEnabled = false
+            return .finished
             
         case .X :
             print("Player X wins")
+            winnerLbl.text = "You Won!"
+            greetingsLbl.text = "Congratulations"
             winnerLbl.textColor = UIColor.blueV1
+            winnerLbl.isHidden = false
+            greetingsLbl.isHidden = false
+            gameObj.resetGame()
+            myCollectionView.isUserInteractionEnabled = false
+            return .finished
         case .none :
-            return
+            return .playing
             
         }
-        winnerLbl.isHidden = false
-        greetingsLbl.isHidden = false
-        gameObj.resetGame()
-        myCollectionView.isUserInteractionEnabled = false
+        
         
     }
     
