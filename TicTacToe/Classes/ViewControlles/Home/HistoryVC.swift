@@ -10,13 +10,18 @@ import CoreData
 
 class HistoryVC: ParentVC {
 
+    //MARK: - Variables
     var gameHistoryList = [GameHistory]()
+    
+    //MARK: - ViewController life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         GameHistoryTVC.prepareToRegister(myTableView)
         gameHistoryList = fetchGameHistory()
         myTableView.reloadData()
     }
+    
+    //Fetch Game history
     func fetchGameHistory() -> [GameHistory] {
         do {
             guard let result = try _appDelegator.context.fetch(GameHistory.fetchRequest()) as? [GameHistory] else { return [] }
@@ -28,10 +33,9 @@ class HistoryVC: ParentVC {
         }
         return []
     }
-
-    
-    
 }
+
+//MARK: - TableView Delegate Methods
 extension HistoryVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gameHistoryList.count

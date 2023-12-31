@@ -8,10 +8,13 @@
 import UIKit
 
 class WalkthroughVC: ParentVC {
+    
+    //MARK: - Outlets
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
     
+    //MARK: - Variables
     var arrWalkThrough: [WalkThrough] = []
     var currentIndex : IndexPath = [0,0]
     override func viewDidLoad() {
@@ -25,6 +28,12 @@ class WalkthroughVC: ParentVC {
         arrWalkThrough = [obj1, obj2 , obj3]
     }
     
+    
+    
+}
+
+//MARK: - Button Click Methods
+extension WalkthroughVC {
     @IBAction func backBtnClick(_ sender: UIButton) {
         myCollectionView.scrollToItem(at: currentIndex.preViousindex, at: .centeredVertically, animated: true)
     }
@@ -47,9 +56,9 @@ class WalkthroughVC: ParentVC {
         
         myCollectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
     }
-    
 }
 
+//MARK: - CollectionView Delegate Methods
 extension WalkthroughVC : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -89,18 +98,3 @@ extension WalkthroughVC : UICollectionViewDelegate, UICollectionViewDelegateFlow
     }
 }
 
-extension IndexPath {
-    var preViousindex : IndexPath  {
-        let index = self.row - 1
-        var path = self
-        path.row = index
-        return path
-    }
-    
-    var nextIndex : IndexPath  {
-        let index = self.row + 1
-        var path = self
-        path.row = index
-        return path
-    }
-}

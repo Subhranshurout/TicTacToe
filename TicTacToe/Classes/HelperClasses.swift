@@ -1,45 +1,12 @@
 //
-//  HomeCVC.swift
+//  HelperClasses.swift
 //  TicTacToe
 //
-//  Created by Subhranhu Sekhar Rout on 26/12/23.
+//  Created by Subhranhu Sekhar Rout on 31/12/23.
 //
 
+import Foundation
 import UIKit
-
-class HomeCVC: UICollectionViewCell {
-
-    @IBOutlet weak var textLbl: UILabel!
-    @IBOutlet weak var bgView: RoundView!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    func prepareUI (playerType : Player) {
-        switch playerType {
-        case .X:
-            bgView.backgroundColor = UIColor.blueV2
-            bgView.borderColor = UIColor.blueV1
-            bgView.borderWidth = 1
-            textLbl.text = "X"
-            textLbl.textColor = UIColor.blueV1
-        case .O:
-            bgView.backgroundColor = UIColor.redV2
-            bgView.borderColor = UIColor.redV1
-            bgView.borderWidth = 1
-            textLbl.text = "O"
-            textLbl.textColor = UIColor.redV1
-        }
-    }
-
-}
-extension HomeCVC {
-    static func prepareToRegister(sender : UICollectionView) {
-        sender.register(UINib(nibName: "HomeCVC", bundle: nil), forCellWithReuseIdentifier: "HomeCVC")
-    }
-}
-
-
 
 class RoundView: UIView {
     @IBInspectable var cornerRadious: CGFloat = 0 {
@@ -71,10 +38,6 @@ class RoundView: UIView {
 }
 
 
-
-
-import UIKit
-
 class CustomRoundedButton: UIButton {
 
     override init(frame: CGRect) {
@@ -92,5 +55,27 @@ class CustomRoundedButton: UIButton {
         layer.borderWidth = 2
         layer.borderColor = UIColor.labelV1.cgColor
         clipsToBounds = true
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.gray.cgColor
+        self.layer.shadowOpacity = 0.3
+        self.layer.shadowOffset = CGSize(width: -2, height: 2)
+        self.layer.shadowRadius = 2
+        self.layer.shouldRasterize = true
+    }
+}
+
+extension IndexPath {
+    var preViousindex : IndexPath  {
+        let index = self.row - 1
+        var path = self
+        path.row = index
+        return path
+    }
+    
+    var nextIndex : IndexPath  {
+        let index = self.row + 1
+        var path = self
+        path.row = index
+        return path
     }
 }

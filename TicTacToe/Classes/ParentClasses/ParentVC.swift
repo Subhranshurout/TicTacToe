@@ -9,6 +9,7 @@ import UIKit
 
 class ParentVC: UIViewController {
 
+    //MARK: - Outlets
     @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {

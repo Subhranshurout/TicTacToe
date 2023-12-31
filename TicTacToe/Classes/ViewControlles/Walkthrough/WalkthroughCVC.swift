@@ -15,6 +15,7 @@ struct WalkThrough {
 }
 
 class WalkthroughCVC: UICollectionViewCell {
+    //MARK: - Outlets
     @IBOutlet weak var subTitleLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var previewImage: UIImageView!

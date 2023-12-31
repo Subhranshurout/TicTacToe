@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK: - Playing modes
 enum PlayingMode {
     case player
     case computer
@@ -39,6 +40,7 @@ class HomeVC: UIViewController {
         }
     }
 
+    //MARK: - Button Clicks
     @IBAction func playBtnClick(_ sender: UIButton) {
         performSegue(withIdentifier: "GameVC", sender: sender.tag)
     }

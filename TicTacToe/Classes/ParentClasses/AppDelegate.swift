@@ -60,6 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    //Creating history
     func createGameHistory( game : GameData) {
         let gameData = GameHistory(context: context)
         gameData.gameMode = game.gameMode
@@ -93,6 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 //    }
     
+    //Cheak if app is opened for first time
     func isAppOpenForFirstTime() {
         if let nav = _appDelegator.window?.rootViewController as? KPNavigationViewController {
             if _userDefault.object(forKey: "kFirstTimeUser") as? Bool ?? false {

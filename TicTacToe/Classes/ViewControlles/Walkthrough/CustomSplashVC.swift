@@ -11,7 +11,6 @@ class CustomSplashVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         prepareUI()
     }
 }
@@ -19,11 +18,9 @@ class CustomSplashVC: UIViewController {
 extension CustomSplashVC {
     
     func prepareUI() {
-//        imgAnimate.loadGif(name: "Splash")
         DispatchQueue.main.asyncAfter(deadline: .now()) {[weak self] in
             guard let weakSelf = self else {return}
             weakSelf.navigateUser()
-//            weakSelf.imgAnimate.image = nil
         }
     }
     

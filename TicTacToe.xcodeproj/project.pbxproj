@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		693A48012B3B29500024F0F0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693A48002B3B29500024F0F0 /* Home.storyboard */; };
 		693A48042B3B29A70024F0F0 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A48032B3B29A70024F0F0 /* GameVC.swift */; };
-		693A48072B3B2AA60024F0F0 /* HomeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A48052B3B2AA60024F0F0 /* HomeCVC.swift */; };
-		693A48082B3B2AA60024F0F0 /* HomeCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693A48062B3B2AA60024F0F0 /* HomeCVC.xib */; };
+		693A48072B3B2AA60024F0F0 /* GameCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A48052B3B2AA60024F0F0 /* GameCVC.swift */; };
+		693A48082B3B2AA60024F0F0 /* GameCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693A48062B3B2AA60024F0F0 /* GameCVC.xib */; };
 		693A480A2B3B4E670024F0F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A48092B3B4E670024F0F0 /* Constants.swift */; };
 		693A480C2B3B4FB90024F0F0 /* KPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A480B2B3B4FB90024F0F0 /* KPNavigationController.swift */; };
 		693A480E2B3B567D0024F0F0 /* CustomSplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A480D2B3B567D0024F0F0 /* CustomSplashVC.swift */; };
@@ -24,6 +24,7 @@
 		694170D42B39EEA8006B93D1 /* WalkthroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694170D32B39EEA8006B93D1 /* WalkthroughVC.swift */; };
 		694170D72B39FBEA006B93D1 /* WalkthroughCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694170D62B39FBEA006B93D1 /* WalkthroughCVC.swift */; };
 		6947A1D72B4171D500309333 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6947A1D62B4171D500309333 /* HeaderView.swift */; };
+		698566FD2B41E8C300013748 /* HelperClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698566FC2B41E8C300013748 /* HelperClasses.swift */; };
 		69B347B52B3C6F560042BF38 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B347B42B3C6F560042BF38 /* GameModel.swift */; };
 		69C93AC62B3F4FCF00427412 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69C93AC42B3F4FCF00427412 /* Roboto-Medium.ttf */; };
 		69C93AC72B3F4FCF00427412 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69C93AC52B3F4FCF00427412 /* Roboto-Regular.ttf */; };
@@ -39,8 +40,8 @@
 /* Begin PBXFileReference section */
 		693A48002B3B29500024F0F0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		693A48032B3B29A70024F0F0 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
-		693A48052B3B2AA60024F0F0 /* HomeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCVC.swift; sourceTree = "<group>"; };
-		693A48062B3B2AA60024F0F0 /* HomeCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCVC.xib; sourceTree = "<group>"; };
+		693A48052B3B2AA60024F0F0 /* GameCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCVC.swift; sourceTree = "<group>"; };
+		693A48062B3B2AA60024F0F0 /* GameCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCVC.xib; sourceTree = "<group>"; };
 		693A48092B3B4E670024F0F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		693A480B2B3B4FB90024F0F0 /* KPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPNavigationController.swift; sourceTree = "<group>"; };
 		693A480D2B3B567D0024F0F0 /* CustomSplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplashVC.swift; sourceTree = "<group>"; };
@@ -56,12 +57,13 @@
 		694170D32B39EEA8006B93D1 /* WalkthroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WalkthroughVC.swift; path = TicTacToe/Classes/ViewControlles/Walkthrough/WalkthroughVC.swift; sourceTree = SOURCE_ROOT; };
 		694170D62B39FBEA006B93D1 /* WalkthroughCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughCVC.swift; sourceTree = "<group>"; };
 		6947A1D62B4171D500309333 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		698566FC2B41E8C300013748 /* HelperClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperClasses.swift; sourceTree = "<group>"; };
 		69B347B42B3C6F560042BF38 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		69C93AC42B3F4FCF00427412 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		69C93AC52B3F4FCF00427412 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		69C93AC82B3F59ED00427412 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		69D8D6A62B409461007818A8 /* GameHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameHistory+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		69D8D6A72B409461007818A8 /* GameHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameHistory+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		69D8D6A62B409461007818A8 /* GameHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "GameHistory+CoreDataClass.swift"; path = "TicTacToe/Classes/Coredata/GameHistory+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		69D8D6A72B409461007818A8 /* GameHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "GameHistory+CoreDataProperties.swift"; path = "TicTacToe/Classes/Coredata/GameHistory+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		69DD16CD2B413F4C00776DC4 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		69DD16CF2B4141AB00776DC4 /* GameHistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryTVC.swift; sourceTree = "<group>"; };
 		69DD16D02B4141AB00776DC4 /* GameHistoryTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameHistoryTVC.xib; sourceTree = "<group>"; };
@@ -109,12 +111,12 @@
 		694170B32B39DFF0006B93D1 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				69C93AC42B3F4FCF00427412 /* Roboto-Medium.ttf */,
-				69C93AC52B3F4FCF00427412 /* Roboto-Regular.ttf */,
 				694170CE2B39EDE0006B93D1 /* Nibs */,
 				694170CF2B39EDE8006B93D1 /* StoryBoards */,
 				694170D02B39EE0E006B93D1 /* Classes */,
 				694170C02B39DFF1006B93D1 /* Assets.xcassets */,
+				69C93AC42B3F4FCF00427412 /* Roboto-Medium.ttf */,
+				69C93AC52B3F4FCF00427412 /* Roboto-Regular.ttf */,
 				694170C52B39DFF1006B93D1 /* Info.plist */,
 				694170BD2B39DFF0006B93D1 /* TicTacToe.xcdatamodeld */,
 			);
@@ -136,8 +138,8 @@
 		694170CE2B39EDE0006B93D1 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
-				693A48052B3B2AA60024F0F0 /* HomeCVC.swift */,
-				693A48062B3B2AA60024F0F0 /* HomeCVC.xib */,
+				693A48052B3B2AA60024F0F0 /* GameCVC.swift */,
+				693A48062B3B2AA60024F0F0 /* GameCVC.xib */,
 				69DD16CF2B4141AB00776DC4 /* GameHistoryTVC.swift */,
 				69DD16D02B4141AB00776DC4 /* GameHistoryTVC.xib */,
 			);
@@ -157,10 +159,11 @@
 		694170D02B39EE0E006B93D1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				69D8D6A52B409442007818A8 /* CoreData */,
+				698566FA2B41E1FF00013748 /* Coredata */,
 				694170D12B39EE2F006B93D1 /* Models */,
 				694170CD2B39ECD8006B93D1 /* ParentClasses */,
 				694170D22B39EE3E006B93D1 /* ViewControlles */,
+				698566FC2B41E8C300013748 /* HelperClasses.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -193,13 +196,13 @@
 			path = Walkthrough;
 			sourceTree = "<group>";
 		};
-		69D8D6A52B409442007818A8 /* CoreData */ = {
+		698566FA2B41E1FF00013748 /* Coredata */ = {
 			isa = PBXGroup;
 			children = (
-				69D8D6A62B409461007818A8 /* GameHistory+CoreDataClass.swift */,
 				69D8D6A72B409461007818A8 /* GameHistory+CoreDataProperties.swift */,
+				69D8D6A62B409461007818A8 /* GameHistory+CoreDataClass.swift */,
 			);
-			path = CoreData;
+			path = Coredata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +269,7 @@
 				69C93AC62B3F4FCF00427412 /* Roboto-Medium.ttf in Resources */,
 				69DD16D22B4141AB00776DC4 /* GameHistoryTVC.xib in Resources */,
 				694170BC2B39DFF0006B93D1 /* Main.storyboard in Resources */,
-				693A48082B3B2AA60024F0F0 /* HomeCVC.xib in Resources */,
+				693A48082B3B2AA60024F0F0 /* GameCVC.xib in Resources */,
 				693A48012B3B29500024F0F0 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,12 +289,13 @@
 				69C93AC92B3F59ED00427412 /* HomeVC.swift in Sources */,
 				6947A1D72B4171D500309333 /* HeaderView.swift in Sources */,
 				693A480E2B3B567D0024F0F0 /* CustomSplashVC.swift in Sources */,
+				698566FD2B41E8C300013748 /* HelperClasses.swift in Sources */,
 				69DD16D42B4149B700776DC4 /* HistoryVC.swift in Sources */,
 				69B347B52B3C6F560042BF38 /* GameModel.swift in Sources */,
 				69D8D6A92B409461007818A8 /* GameHistory+CoreDataProperties.swift in Sources */,
 				694170D72B39FBEA006B93D1 /* WalkthroughCVC.swift in Sources */,
 				69D8D6A82B409461007818A8 /* GameHistory+CoreDataClass.swift in Sources */,
-				693A48072B3B2AA60024F0F0 /* HomeCVC.swift in Sources */,
+				693A48072B3B2AA60024F0F0 /* GameCVC.swift in Sources */,
 				694170B72B39DFF0006B93D1 /* SceneDelegate.swift in Sources */,
 				694170D42B39EEA8006B93D1 /* WalkthroughVC.swift in Sources */,
 				69DD16CE2B413F4C00776DC4 /* GameData.swift in Sources */,
