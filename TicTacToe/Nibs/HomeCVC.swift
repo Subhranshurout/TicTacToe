@@ -88,8 +88,8 @@ class CustomRoundedButton: UIButton {
     }
 
     private func setupButton() {
-        layer.cornerRadius = 4.0
-        layer.borderWidth = 1.5
+        layer.cornerRadius = 5.0
+        layer.borderWidth = 2
         layer.borderColor = UIColor.labelV1.cgColor
         clipsToBounds = true
     }

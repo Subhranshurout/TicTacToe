@@ -53,7 +53,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="  Play Again">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <imageReference key="image" image="goforward" catalog="system" symbolScale="small"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
                                 </state>
@@ -98,7 +98,7 @@
                                             <fontDescription key="titleFontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="backBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FhU-zQ-nuA"/>
+                                            <action selector="backBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="j7v-Ix-zQs"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bB-Dl-vhF">
@@ -188,7 +188,7 @@
                                     <constraint firstAttribute="height" constant="28" id="aOH-9g-7at"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTj-do-8Ud" customClass="CustomRoundedButton" customModule="TicTacToe" customModuleProvider="target">
@@ -200,7 +200,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Single Player Mode">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="playBtnClick:" destination="u34-k2-nnH" eventType="touchUpInside" id="Llq-gn-1T5"/>
@@ -215,12 +215,38 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Multiplayer Mode">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="playBtnClick:" destination="u34-k2-nnH" eventType="touchUpInside" id="i6e-fw-PIw"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2v-SP-lpJ">
+                                <rect key="frame" x="0.0" y="50" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXS-Yw-2jg">
+                                        <rect key="frame" x="315" y="0.0" width="50" height="40"/>
+                                        <color key="tintColor" name="labelV1"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="clock" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="plain" image="clock" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="historyBtnClick:" destination="u34-k2-nnH" eventType="touchUpInside" id="Fcv-7Q-gFk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="HXS-Yw-2jg" firstAttribute="top" secondItem="P2v-SP-lpJ" secondAttribute="top" id="MNw-eu-4XR"/>
+                                    <constraint firstAttribute="trailing" secondItem="HXS-Yw-2jg" secondAttribute="trailing" constant="10" id="S3D-34-coO"/>
+                                    <constraint firstAttribute="height" constant="40" id="n4r-FM-cj2"/>
+                                    <constraint firstAttribute="bottom" secondItem="HXS-Yw-2jg" secondAttribute="bottom" id="yUG-Zh-iVd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lko-Ct-rHO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -228,9 +254,12 @@
                             <constraint firstItem="g5K-gt-ZSR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lko-Ct-rHO" secondAttribute="leading" constant="10" id="2KW-4y-YJY"/>
                             <constraint firstItem="lko-Ct-rHO" firstAttribute="trailing" secondItem="OTj-do-8Ud" secondAttribute="trailing" constant="24" id="4Mk-MT-o02"/>
                             <constraint firstItem="VHv-At-9Bh" firstAttribute="leading" secondItem="OTj-do-8Ud" secondAttribute="leading" id="4PE-rF-Blu"/>
+                            <constraint firstItem="P2v-SP-lpJ" firstAttribute="trailing" secondItem="lko-Ct-rHO" secondAttribute="trailing" id="6J9-Mf-qRp"/>
+                            <constraint firstItem="P2v-SP-lpJ" firstAttribute="leading" secondItem="lko-Ct-rHO" secondAttribute="leading" id="82k-lG-ZKh"/>
                             <constraint firstItem="g5K-gt-ZSR" firstAttribute="centerX" secondItem="Pfu-97-TcN" secondAttribute="centerX" id="8t1-Xv-R33"/>
                             <constraint firstItem="g5K-gt-ZSR" firstAttribute="top" secondItem="us4-ZC-md7" secondAttribute="bottom" constant="5" id="D3m-vf-urg"/>
                             <constraint firstItem="VHv-At-9Bh" firstAttribute="trailing" secondItem="OTj-do-8Ud" secondAttribute="trailing" id="G15-8Q-EVf"/>
+                            <constraint firstItem="P2v-SP-lpJ" firstAttribute="top" secondItem="lko-Ct-rHO" secondAttribute="top" id="Inp-NI-hMa"/>
                             <constraint firstItem="Pfu-97-TcN" firstAttribute="centerY" secondItem="5gj-Uz-WzP" secondAttribute="centerY" constant="-45" id="KnC-9T-flu"/>
                             <constraint firstItem="OTj-do-8Ud" firstAttribute="top" secondItem="VHv-At-9Bh" secondAttribute="bottom" constant="15" id="QSW-JP-9fc"/>
                             <constraint firstItem="us4-ZC-md7" firstAttribute="trailing" secondItem="g5K-gt-ZSR" secondAttribute="trailing" id="b9k-Ra-bKk"/>
@@ -245,15 +274,157 @@
                     </view>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="show" identifier="GameVC" id="Rq2-Wz-esb"/>
+                        <segue destination="Wib-7f-UsL" kind="show" identifier="HistoryVC" id="9SV-ne-d7Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41D-id-vdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="806" y="4"/>
         </scene>
+        <!--HistoryVC-->
+        <scene sceneID="1ju-FP-Z6y">
+            <objects>
+                <viewController id="Wib-7f-UsL" customClass="HistoryVC" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e8h-CU-KKk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="E92-g9-6nQ">
+                                <rect key="frame" x="0.0" y="40" width="375" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HeaderView" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeaderView" rowHeight="55" id="RiZ-uA-VHv" customClass="HeaderView" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RiZ-uA-VHv" id="Qnl-ei-rEZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vn-we-miU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="7sb-bk-c79">
+                                                            <rect key="frame" x="10" y="2" width="355" height="51"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfS-Jn-h2X">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="86.666666666666671" height="51"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvj-2Z-qZL">
+                                                                    <rect key="frame" x="89.666666666666686" y="0.0" width="86.333333333333314" height="51"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4j-39-T0T">
+                                                                    <rect key="frame" x="179" y="0.0" width="86.666666666666686" height="51"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACa-NR-ZGY">
+                                                                    <rect key="frame" x="268.66666666666669" y="0.0" width="86.333333333333314" height="51"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="7sb-bk-c79" firstAttribute="top" secondItem="1vn-we-miU" secondAttribute="top" constant="2" id="Hgl-Sp-U4R"/>
+                                                        <constraint firstItem="7sb-bk-c79" firstAttribute="leading" secondItem="1vn-we-miU" secondAttribute="leading" constant="10" id="In7-V3-Enk"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7sb-bk-c79" secondAttribute="bottom" constant="2" id="Uip-Om-JNS"/>
+                                                        <constraint firstAttribute="trailing" secondItem="7sb-bk-c79" secondAttribute="trailing" constant="10" id="iug-6D-1Qz"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="1vn-we-miU" secondAttribute="trailing" id="51O-U7-SRQ"/>
+                                                <constraint firstItem="1vn-we-miU" firstAttribute="leading" secondItem="Qnl-ei-rEZ" secondAttribute="leading" id="VUm-WO-AOq"/>
+                                                <constraint firstItem="1vn-we-miU" firstAttribute="top" secondItem="Qnl-ei-rEZ" secondAttribute="top" id="fix-Vt-fxG"/>
+                                                <constraint firstAttribute="bottom" secondItem="1vn-we-miU" secondAttribute="bottom" id="v1z-ao-Umb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wib-7f-UsL" id="yz7-dO-b7l"/>
+                                    <outlet property="delegate" destination="Wib-7f-UsL" id="1g3-Ao-s0L"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7Z-1O-Oye">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgc-Iv-IVv">
+                                        <rect key="frame" x="10" y="3" width="40" height="34.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="ocd-ee-X0P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.backward" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="medium"/>
+                                            <fontDescription key="titleFontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="backBtn:" destination="Wib-7f-UsL" eventType="touchUpInside" id="5EG-EH-oZj"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5Y-vD-9pG">
+                                        <rect key="frame" x="160.33333333333334" y="0.0" width="54.333333333333343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="wbc-mk-vCF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="S5Y-vD-9pG" firstAttribute="centerY" secondItem="q7Z-1O-Oye" secondAttribute="centerY" id="9tq-wU-48X"/>
+                                    <constraint firstItem="S5Y-vD-9pG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lgc-Iv-IVv" secondAttribute="trailing" constant="10" id="C2k-zL-LaV"/>
+                                    <constraint firstAttribute="height" constant="40" id="G6j-L9-8AU"/>
+                                    <constraint firstItem="lgc-Iv-IVv" firstAttribute="leading" secondItem="q7Z-1O-Oye" secondAttribute="leading" constant="10" id="O5d-lU-sXN"/>
+                                    <constraint firstItem="lgc-Iv-IVv" firstAttribute="centerY" secondItem="q7Z-1O-Oye" secondAttribute="centerY" id="bHu-aD-FRL"/>
+                                    <constraint firstItem="S5Y-vD-9pG" firstAttribute="centerX" secondItem="q7Z-1O-Oye" secondAttribute="centerX" id="hsq-ME-cwn"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S5Y-vD-9pG" secondAttribute="trailing" constant="60" id="ifY-9a-PgZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7AU-XQ-puD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q7Z-1O-Oye" firstAttribute="leading" secondItem="e8h-CU-KKk" secondAttribute="leading" id="1me-XD-Txu"/>
+                            <constraint firstItem="7AU-XQ-puD" firstAttribute="trailing" secondItem="q7Z-1O-Oye" secondAttribute="trailing" id="GBM-4N-VnW"/>
+                            <constraint firstItem="E92-g9-6nQ" firstAttribute="leading" secondItem="7AU-XQ-puD" secondAttribute="leading" id="Kp1-Qd-ayN"/>
+                            <constraint firstItem="7AU-XQ-puD" firstAttribute="bottom" secondItem="E92-g9-6nQ" secondAttribute="bottom" id="RZH-uu-wj2"/>
+                            <constraint firstItem="q7Z-1O-Oye" firstAttribute="top" secondItem="7AU-XQ-puD" secondAttribute="top" id="sX2-MO-hLY"/>
+                            <constraint firstItem="E92-g9-6nQ" firstAttribute="top" secondItem="q7Z-1O-Oye" secondAttribute="bottom" id="vHE-wx-SEn"/>
+                            <constraint firstItem="7AU-XQ-puD" firstAttribute="trailing" secondItem="E92-g9-6nQ" secondAttribute="trailing" id="yx1-RN-iDR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xxl-F0-3c2"/>
+                    <connections>
+                        <outlet property="myTableView" destination="E92-g9-6nQ" id="nD5-mC-ZQs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovj-4B-XEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.60000000000002" y="727.83251231527095"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="clock" catalog="system" width="128" height="123"/>
         <image name="goforward" catalog="system" width="119" height="128"/>
         <image name="ic_logo" width="158" height="136"/>
         <namedColor name="labelV1">

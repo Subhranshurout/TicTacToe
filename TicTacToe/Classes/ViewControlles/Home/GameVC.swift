@@ -42,11 +42,7 @@ class GameVC: ParentVC, ComputerModeDelegate {
         }
         
     }
-    
-    @IBAction func backBtn(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+        
     
     @IBAction func playAgainBtnClick(_ sender: UIButton) {
         winnerLbl.isHidden = true
@@ -129,6 +125,13 @@ extension GameVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
     }
     
     func winnerCheck() -> GameMode {
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        let dateString = dateFormatter.string(from: currentDate)
+        let timeString = timeFormatter.string(from: currentDate)
         switch gameObj.checkForWinner() {
         case .O :
             print ("Player O wins")
@@ -136,12 +139,14 @@ extension GameVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
                 winnerLbl.text = "You Lost!"
                 greetingsLbl.text = "Better luck next time.."
             }
+            _appDelegator.createGameHistory(game: GameData(gameMode: playingMode.identifier, winner: playingMode == .computer ? "Computer" : "O", dateOp: dateString, timeOp: timeString))
+            _appDelegator.saveContext()
             winnerLbl.textColor = UIColor.redV1
-            
             winnerLbl.isHidden = false
             greetingsLbl.isHidden = false
             gameObj.resetGame()
             myCollectionView.isUserInteractionEnabled = false
+            
             return .finished
             
         case .X :
@@ -153,6 +158,8 @@ extension GameVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             greetingsLbl.isHidden = false
             gameObj.resetGame()
             myCollectionView.isUserInteractionEnabled = false
+            _appDelegator.createGameHistory(game: GameData(gameMode: playingMode.identifier, winner: playingMode == .computer ? "You" : "X", dateOp: dateString, timeOp: timeString))
+            _appDelegator.saveContext()
             return .finished
         case .none :
             return .playing

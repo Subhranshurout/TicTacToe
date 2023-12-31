@@ -10,10 +10,16 @@ import UIKit
 class ParentVC: UIViewController {
 
     @IBOutlet weak var myCollectionView: UICollectionView!
+    @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func backBtn(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+
 
 }

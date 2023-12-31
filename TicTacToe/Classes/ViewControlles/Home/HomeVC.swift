@@ -10,6 +10,13 @@ import UIKit
 enum PlayingMode {
     case player
     case computer
+    
+    var identifier: String {
+        switch self {
+            case .player: return "Multiplayer"
+            case .computer: return "Single player"
+        }
+    }
 }
 
 class HomeVC: UIViewController {
@@ -35,4 +42,9 @@ class HomeVC: UIViewController {
     @IBAction func playBtnClick(_ sender: UIButton) {
         performSegue(withIdentifier: "GameVC", sender: sender.tag)
     }
+    
+    @IBAction func historyBtnClick(_ sender: Any) {
+        performSegue(withIdentifier: "HistoryVC", sender: nil)
+    }
+    
 }
