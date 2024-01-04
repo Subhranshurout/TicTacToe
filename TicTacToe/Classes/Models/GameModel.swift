@@ -50,7 +50,9 @@ class TicTacToe {
     ///To switch b/w Players
     func switchPlayer(playerMode: PlayingMode = .player) {
         if playerMode == .computer {
-            computerDelegate?.computerMadeMove(at: makeComputerMove())
+            if !isBoardFull() {
+                computerDelegate?.computerMadeMove(at: makeComputerMove())
+            }
         }
     }
     
